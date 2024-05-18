@@ -1,5 +1,3 @@
-// This should com from setupTests.js
-import '@testing-library/jest-dom';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import Button from './Button'; // Adjust the import path according to your structure
