@@ -55,6 +55,34 @@ This command uses Webpack to bundle the components into `dist/bundle.js`.
 - **Babel Configuration**: `.babelrc`
 - **TypeScript Configuration**: `tsconfig.json`
 
+## Storybook Integration
+
+This project is configured to use Storybook, which helps you build UI components in isolation and offers tools to enhance frontend development.
+
+### Running Storybook
+
+To run Storybook locally and explore the components, use the following command:
+
+```bash
+npm run storybook
+```
+
+This will start Storybook on `http://localhost:6006` where you can view and interact with your component library.
+
+### Building Storybook
+
+To build a static version of Storybook, which can be deployed or shared, run:
+
+```bash
+npm run build-storybook
+```
+
+This command will generate a static web application in your `storybook-static` directory that you can deploy to a static hosting service.
+
+### Learn More
+
+For more detailed information on using and configuring Storybook, visit the [Storybook documentation](https://storybook.js.org/docs/react/get-started/introduction).
+
 ## Publishing a New Version
 
 To publish a new version of the library, follow these steps:
@@ -78,5 +106,6 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
