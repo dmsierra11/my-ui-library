@@ -1,19 +1,35 @@
 import React from 'react';
-import styles from './Button.module.css';
+import './button.css';
+// import './Button.module.css';
 
+// Define an interface for the Button props
 interface ButtonProps {
+    primary?: boolean;
+    backgroundColor?: string;
+    size?: 'small' | 'medium' | 'large';
     label: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+/**
+ * Primary UI component for user interaction
+ */
+export const Button: React.FC<ButtonProps> = ({
+    primary = false,
+    backgroundColor = null,
+    size = 'medium',
+    label,
+    ...props
+}) => {
+    const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
     return (
-        <button className={styles.button} onClick={onClick}>
+        <button
+            type="button"
+            className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+            style={backgroundColor ? { backgroundColor } : undefined}
+            {...props}
+        >
             {label}
         </button>
     );
 };
-
-export default Button;
-
-
