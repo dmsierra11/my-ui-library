@@ -3,7 +3,7 @@ import './button.css';
 // import './Button.module.css';
 
 // Define an interface for the Button props
-interface ButtonProps {
+export interface ButtonProps {
     primary?: boolean;
     backgroundColor?: string;
     size?: 'small' | 'medium' | 'large';
